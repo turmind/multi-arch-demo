@@ -5,7 +5,8 @@
 ### 执行方法
 
 ```linux
-./echo_server -n 2
+chmod +x echo-server
+./echo-server -n 2
 ```
 
 ### 相关参数
