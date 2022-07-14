@@ -71,7 +71,9 @@ func handleRequest(conn net.Conn) {
 		}
 		// Send a response back to person contacting us.
 		message := string(buf[:len])
-		conn.Write([]byte(fmt.Sprintf("received message from %s, content is: %s\n", conn.RemoteAddr().String(), message)))
+		response := fmt.Sprintf("received message from %s, content is: %s\n", conn.RemoteAddr().String(), message)
+		fmt.Println(response)
+		conn.Write([]byte(response))
 		if string(buf[:4]) == "exit" {
 			conn.Write([]byte("bye\n"))
 			break
