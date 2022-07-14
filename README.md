@@ -11,7 +11,7 @@ CGO_ENABLED=0 GOOS=linux GOARCH=arm64 GO111MODULE=on go build -a -o bin/echo-ser
 ### linux indel
 
 ```linux
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO111MODULE=on go build -a -o bin/echo-server_indel
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO111MODULE=on go build -a -o bin/echo-server_intel
 ```
 
 ## 使用方法
