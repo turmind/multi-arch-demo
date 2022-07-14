@@ -47,10 +47,12 @@ func listen(netType, host, port string) {
 	for {
 		// Listen for an incoming connection.
 		conn, err := l.Accept()
+
 		if err != nil {
 			fmt.Println("Error accepting: ", err.Error())
 			os.Exit(1)
 		}
+		fmt.Printf("Get connection: %s\n", conn.RemoteAddr().String())
 		// Handle connections in a new goroutine.
 		go handleRequest(conn)
 	}
